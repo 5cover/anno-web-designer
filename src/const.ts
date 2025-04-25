@@ -1,0 +1,1 @@
+export const CELL_SIZE_MM = 5;

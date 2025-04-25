@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+* + * {
+    margin-top: 1.5em;
+}
+
+h1 {
+    margin: 0;
+}
+
+.grid-cell {
+    border: 1px solid black;
+}

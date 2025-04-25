@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Grid from "./components/Grid";
+import Building from "./components/Building";
+import './css/App.css';
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+    return (
+        <DndProvider backend={HTML5Backend}>
+            <main>
+                <h1>Anno Web Designer</h1>
+
+                {/* <button
+                onClick={() => addBuilding({ id: Date.now(), type: "House", color: "blue", x: 5, y: 5 })}>
+                Add Building
+            </button> */}
+
+                <Grid rows={20} cols={20} />
+                <Building type="House" width={3} height={3} color="blue" />
+            </main>
+        </DndProvider>
+    );
 }
-
-export default App;
